@@ -49,11 +49,15 @@ PowerShell 读取文本前应设置：
 ### 多模型分支试验
 
 - 初始候选模型必须先写入 `00_problem/model_options.md` 并暂停，等待用户选择；不得为了试验方便绕过模型路线选择关卡。
-- 若用户确认需要并行尝试多条模型路线，应从最新稳定主分支创建独立分支，分支名使用 `model/<方法名>`，例如 `model/baseline-linear`、`model/xgboost`、`model/milp`。
+- 基准模型是统一评价底座，不占用候选路线名额；至少 3 个候选路线必须在调研选型关卡中确定。
+- `00_problem/model_options.md` 必须写清路线执行方式：单路线推进，或多路线分支比较；多路线比较还要列出被选入比较的路线。
+- 创建多模型分支前，必须先在主分支完成并提交统一基准模型、数据版本、评价指标、随机种子和验证切分。
+- 若用户确认需要并行尝试多条模型路线，应从最新稳定主分支创建独立分支，分支名使用 `model/<方法名>`，例如 `model/xgboost`、`model/milp`、`model/heuristic`。
 - 每个模型分支必须保存独立的代码、结果表、图、实验日志和论文片段，必要时按模型名划分结果目录，避免互相覆盖。
 - 各模型分支应使用一致的数据版本、评价指标、随机种子和验证切分；差异必须记录在 `06_management/experiment_log.csv` 或对应说明文件中。
 - 每个模型分支完成一次可复现实验后必须本地提交，并记录关键指标、结果路径和已知问题。
-- 最终选择模型前，应回到主分支或约定的汇总分支，整理统一比较表，优先保存到 `03_results/tables/model_comparison.csv`；同时更新 `00_problem/model_options.md`、`06_management/decision_log.md` 和 `04_paper/paper_draft.md`，然后暂停等待用户确认。
+- 最终选择模型前，应回到主分支或约定的汇总分支，整理统一比较表，优先保存到 `03_results/tables/model_comparison.csv`；所有被选入比较的分支都必须有可复现实验结果，或有明确失败原因与异常记录，不得只展示成功模型。
+- 最终选择前必须更新 `00_problem/model_options.md`、`06_management/decision_log.md` 和 `04_paper/paper_draft.md`，然后暂停等待用户确认。
 
 ## 启动必读文件
 
