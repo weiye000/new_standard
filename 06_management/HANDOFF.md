@@ -1,7 +1,7 @@
 ﻿# 交接记录
 
 ## 上次完成动作
-已初始化工作区骨架，创建根目录 `AGENTS.md`，并创建本地 `eecup-autopilot` skill。已补充 Git 保存纪律与多模型分支试验规则：重要进度本地提交，远程推送前暂停确认，多模型路线使用独立分支试验并统一比较。
+已初始化工作区骨架，创建根目录 `AGENTS.md`，并创建本地 `eecup-autopilot` skill。已补充 Git 保存纪律与多模型分支试验规则：重要进度本地提交，不主动考虑远程推送，多模型路线使用独立分支试验并统一比较。
 
 ## 修改文件
 - `AGENTS.md`
@@ -19,7 +19,7 @@
 - `.codex/skills/eecup-autopilot/references/modeling-playbook.md`
 
 ## 验证
-初始化脚本已成功运行。`quick_validate.py` 报告：Skill is valid. Git 工作流规则已通过 diff 检查，未设置自动远程推送。
+初始化脚本已成功运行。`quick_validate.py` 报告：Skill is valid. Git 工作流规则已通过 diff 检查，当前流程只要求本地提交。
 
 ## 阻塞
 开始建模前需要官方题面和数据。

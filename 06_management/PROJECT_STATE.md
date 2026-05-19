@@ -23,7 +23,7 @@
 - 论文模板检查关卡：官方模板优先；无官方模板时按论文规范排版；第三方 LaTeX 模板仅参考
 - 读题行为规范：`references/problem-reading.md`
 - Markdown 论文同步初稿：`04_paper/paper_draft.md`
-- Git 保存纪律和多模型分支试验规则已写入 `AGENTS.md` 与 `eecup-autopilot` skill：重要进度本地提交，远程推送前暂停确认，多模型路线用独立分支试验并统一比较。
+- Git 保存纪律和多模型分支试验规则已写入 `AGENTS.md` 与 `eecup-autopilot` skill：重要进度本地提交，不主动考虑远程推送，多模型路线用独立分支试验并统一比较。
 
 ## 未解决风险
 - 官方题面和数据尚未加载。
